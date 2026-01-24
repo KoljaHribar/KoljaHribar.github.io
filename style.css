@@ -363,12 +363,14 @@ section.section h2::before{
   line-height: 1.7;
 }
 
-/* Project Images */
-.project-showcase{
+/* Updated Project Image Styling */
+.project-showcase {
   display: block;
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
+  width: 100%;       /* Ensures it fills the card width */
+  max-width: 100%;   /* Prevents it from leaking out of the right side */
+  height: auto;      /* Maintains the correct aspect ratio */
+  max-height: 400px; /* Limits vertical height so it's not too long */
+  object-fit: cover; /* Crops nicely if it exceeds the max-height */
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,.1);
   margin-bottom: 16px;
