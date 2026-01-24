@@ -1,3 +1,5 @@
+ /* 90% of the css was written by Gemini based on my requirements for the overall look of the website*/
+ /*tweaks made by me were mostly getting the right image size, colour and position */
 :root{
   /* Core palette */
   --bg:#070A12;
@@ -307,6 +309,7 @@ section.section h2::before{
   gap: 10px;
   flex-wrap:wrap;
   align-items:center;
+  margin-top: 20px;
 }
 
 .btn{
@@ -357,6 +360,19 @@ section.section h2::before{
 .desc{
   margin-top: 8px;
   color: rgba(234,240,255,.78);
+  line-height: 1.7;
+}
+
+/* Project Images */
+.project-showcase{
+  display: block;
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.1);
+  margin-bottom: 16px;
+  margin-top: 4px;
 }
 
 /* ---------- Expandable (minimal -> detailed) cards ---------- */
@@ -465,17 +481,6 @@ section.section h2::before{
   grid-column: span 12;
 }
 
-/* Skills grid */
-.skills-grid{
-  grid-template-columns: repeat(12, 1fr);
-}
-.skills-grid .card{ grid-column: span 12; }
-
-.mini-title{
-  margin: 0 0 10px;
-  font-size: 16px;
-}
-
 /* Contact list */
 .contact-list{
   list-style:none;
@@ -509,6 +514,11 @@ section.section h2::before{
   justify-content:space-between;
   gap: 12px;
   flex-wrap:wrap;
+}
+.credit-small {
+  font-size: 13px;
+  color: rgba(234,240,255,.5);
+  margin-top: 6px;
 }
 .backtop{
   padding: 8px 10px;
