@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-  <!-- ChatGPT gave me the header layout, I filled in the title and photo-->
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,7 +7,6 @@
 
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="kolja_photo.jpg" />
-    <!-- Gemini recommended me this style -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -18,7 +16,6 @@
 
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <!-- I asked ChatGPT for a futuristic modern background, it generated these blobs-->
     <div class="bg-blob blob-1" aria-hidden="true"></div>
     <div class="bg-blob blob-2" aria-hidden="true"></div>
     <div class="bg-blob blob-3" aria-hidden="true"></div>
@@ -27,7 +24,6 @@
       <div class="container hero-grid">
         <div class="hero-left">
           <p class="kicker">Student • Data Science • Pittsburgh</p>
-          <!-- My touch, thought it made it feel more personal -->
           <h1>Hello, it’s <span class="gradient-text">Kolja</span></h1>
 
           <p class="hero-sub">
@@ -35,7 +31,6 @@
             Pittsburgh. I build practical and clean tools for analysis, turning messy data into clear insights and reliable
             software.
           </p>
-          <!-- I passed in the links to these websites and ChatGPT provided the code, with the icons-->
           <div class="hero-row">
             <div class="icon-row" aria-label="Contact links">
               <a class="icon-btn" href="https://github.com/KoljaHribar" target="_blank" rel="noopener" aria-label="GitHub">
@@ -64,7 +59,6 @@
         </div>
       </div>
     </header>
-    <!-- I chose these four, thought the skills was a bit too much for now-->
     <nav class="nav" aria-label="Primary navigation">
       <div class="container">
         <ul class="nav-links">
@@ -77,14 +71,13 @@
     </nav>
 
     <main class="container" id="main">
-      <!-- I asked Gemini to make all my previous projects, which were all stationary and had only bullet points, into expandable cards-->
       <section id="projects" class="section">
         <div class="section-head">
           <h2>Projects</h2>
         </div>
 
         <div class="grid expando-grid">
-          <details class="card expando" open>
+          <details class="card expando">
             <summary class="expando-summary">
               <div class="expando-core">
                 <h3 class="expando-title">ASL Translation Aid</h3>
@@ -105,7 +98,6 @@
                 Built a prototype pipeline that translates American Sign Language gestures into text, focusing on clean
                 data structures and real-time inference.
               </p>
-              <!-- The highlights of the project were ChatGPT generated, taken from my resume-->
               <div class="split">
                 <div>
                   <h4 class="mini-h">Highlights</h4>
@@ -126,7 +118,6 @@
                     <span class="tag">TensorFlow</span>
                     <span class="tag">Team of 4</span>
                   </div>
-                  <!-- Usually a part of someone's project description so I included it-->
                   <h4 class="mini-h" style="margin-top: 14px;">What I’d do next</h4>
                   <ul class="bullets">
                     <li>Improve temporal smoothing to reduce irregular variations in predictions</li>
@@ -145,7 +136,7 @@
               </div>
             </div>
           </details>
-          <!-- Same process as ASL Project-->
+          
           <details class="card expando">
             <summary class="expando-summary">
               <div class="expando-core">
@@ -206,7 +197,7 @@
               </div>
             </div>
           </details>
-          <!-- Same process as ASL Project-->
+          
           <details class="card expando">
             <summary class="expando-summary">
               <div class="expando-core">
@@ -261,7 +252,7 @@
               </div>
             </div>
           </details>
-          <!-- Wrote from scratch, but with the help of the other three project templates-->
+          
           <details class="card expando">
             <summary class="expando-summary">
               <div class="expando-core">
@@ -319,9 +310,69 @@
             </div>
           </details>
 
+           <details class="card expando">
+            <summary class="expando-summary">
+              <div class="expando-core">
+                <h3 class="expando-title">Crossy Roads 1 Hour Gemini Challenge</h3>
+                <p class="expando-one">
+                  A challenge to recreate the classic arcade game Crossy Roads using Gemini 3.
+                </p>
+              </div>
+              <div class="expando-meta">
+                <span class="time">School Work Project • Spring 2026</span>
+                <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
+              </div>
+            </summary>
+
+            <div class="expando-body">
+              <img src="game.jpg" alt="Screenshot of the Crossy Roads game clone showing player character and obstacles" class="project-showcase" />
+              
+              <p class="desc">
+                Developed a functional clone of Crossy Roads by prompting Gemini 3 to make step by step changes.
+              </p>
+
+              <div class="split">
+                <div>
+                  <h4 class="mini-h">Highlights</h4>
+                  <ul class="bullets">
+                    <li><b>OOP Design:</b> Structured game objects (player, obstacles, terrain) using inheritance and polymorphism</li>
+                    <li><b>Game Loop:</b> Implemented a real-time update and render cycle for smooth gameplay</li>
+                    <li><b>Collision Detection:</b> Created bounding-box logic to handle interactions between the player and traffic</li>
+                    <li><b>State Management:</b> Managed game states (menu, playing, game over) and score tracking</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="mini-h">Tech</h4>
+                  <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">OOP</span>
+                    <span class="tag">Pygame</span>
+                    <span class="tag">GUI</span>
+                  </div>
+
+                  <h4 class="mini-h" style="margin-top: 14px;">What I’d do next</h4>
+                  <ul class="bullets">
+                    <li>Add sound affects and animations to the game</li>
+                    <li>Improve the looks of objects and the background</li>
+                    <li>Add more fun and exciting features to the game</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="actions">
+                <a class="btn" href="https://github.com/KoljaHribar/Crossy-Road-with-AI-Challenge/tree/main" target="_blank" rel="noopener">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i> Code
+                </a>
+                <a class="btn btn-ghost" href="#contact">
+                  <i class="fa-regular fa-file-lines" aria-hidden="true"></i> Ask me about it
+                </a>
+              </div>
+            </div>
+          </details>
+
         </div>
       </section>
-      <!-- Made in a similar way as the Projects section, text taken from resume and changed by ChatGPT to fit the website layout, then tweaked by me-->
       <section id="experience" class="section">
         <div class="section-head">
           <h2>Experience</h2>
@@ -472,7 +523,6 @@
           </details>
         </div>
       </section>
-      <!-- I wrote three short sentences about myself, ChatGPT helped me make it sound better-->
       <section id="about" class="section">
         <h2>About</h2>
         <p>
@@ -527,7 +577,6 @@
         </ul>
       </section>
     </main>
-    <!-- Footer made in a style as the additional notes on class website recommend-->
     <footer class="footer">
       <div class="container footer-row">
         <div class="footer-info">
@@ -537,5 +586,15 @@
         <a class="backtop" href="#top">Back to top ↑</a>
       </div>
     </footer>
+    
+    <script>
+      if (history.scrollRestoration) {
+        history.scrollRestoration = 'manual';
+      } else {
+        window.onbeforeunload = function () {
+          window.scrollTo(0, 0);
+        }
+      }
+    </script>
   </body>
 </html>
