@@ -26,7 +26,6 @@
         <div class="hero-left">
           <p class="kicker">Student • Data Science • Pittsburgh</p>
           <h1>Hello, it’s <span class="gradient-text">Kolja</span></h1>
-
           <p class="hero-sub">
             I’m an international student from Slovenia studying Data Science and Computer Science at the University of
             Pittsburgh. I build practical and clean tools for analysis, turning messy data into clear insights and reliable
@@ -37,13 +36,7 @@
               <a class="icon-btn" href="https://github.com/KoljaHribar" target="_blank" rel="noopener" aria-label="GitHub">
                 <i class="fa-brands fa-github" aria-hidden="true"></i>
               </a>
-              <a
-                class="icon-btn"
-                href="https://www.linkedin.com/in/kolja-hribar/"
-                target="_blank"
-                rel="noopener"
-                aria-label="LinkedIn"
-              >
+              <a class="icon-btn" href="https://www.linkedin.com/in/kolja-hribar/" target="_blank" rel="noopener" aria-label="LinkedIn">
                 <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
               </a>
               <a class="icon-btn" href="mailto:kolja.hribar@gmail.com" aria-label="Email">
@@ -52,7 +45,6 @@
             </div>
           </div>
         </div>
-
         <div class="hero-right">
           <div class="photo-frame">
             <img src="kolja_photo.jpg" alt="Photo of Kolja Hribar" />
@@ -79,305 +71,218 @@
     </nav>
 
     <main class="container" id="main">
+      
       <section id="projects" class="section">
         <div class="section-head">
           <h2>Projects</h2>
         </div>
 
-        <div class="grid expando-grid">
-          <details class="card expando">
-            <summary class="expando-summary">
-              <div class="expando-core">
-                <h3 class="expando-title">ASL Translation Aid</h3>
-                <p class="expando-one">
-                  Real-time ASL gesture → text prototype using hand landmarks and classification for accessibility.
-                </p>
-              </div>
-              <div class="expando-meta">
+        <div class="grid modal-grid">
+          
+          <div class="card project-card" tabindex="0">
+            <div class="card-image-wrapper">
+              <img src="projectASL.jpg" alt="ASL Project" class="card-cover" />
+            </div>
+            <div class="card-content">
+              <div class="card-header">
+                <h3 class="card-title">ASL Translation Aid</h3>
                 <span class="time">Hackathon • Sep 2025</span>
-                <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
               </div>
-            </summary>
-
-            <div class="expando-body">
-              <img src="projectASL.jpg" alt="Screenshot of the ASL Translation Aid interface showing real-time hand tracking" class="project-showcase" />
-              
-              <p class="desc">
-                Built a prototype pipeline that translates American Sign Language gestures into text, focusing on clean
-                data structures and real-time inference.
+              <p class="card-summary">
+                Real-time ASL gesture → text prototype using hand landmarks and classification.
               </p>
-              <div class="split">
-                <div>
-                  <h4 class="mini-h">Highlights</h4>
-                  <ul class="bullets">
-                    <li><b>Inference loop:</b> designed a frame → landmarks → model → output flow</li>
-                    <li><b>Structure:</b> created clear data objects for gestures and predicted tokens</li>
-                    <li><b>ML:</b> experimented with RandomForest and TensorFlow-based approaches</li>
-                    <li><b>Realtime:</b> used MediaPipe for hand tracking on webcam frames</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 class="mini-h">Tech</h4>
-                  <div class="tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">MediaPipe</span>
-                    <span class="tag">RandomForest</span>
-                    <span class="tag">TensorFlow</span>
-                    <span class="tag">Team of 4</span>
+              <div class="modal-data" hidden>
+                <div class="split">
+                  <div>
+                    <h4 class="mini-h">Highlights</h4>
+                    <ul class="bullets">
+                      <li><b>Inference loop:</b> designed a frame → landmarks → model → output flow</li>
+                      <li><b>Structure:</b> created clear data objects for gestures and predicted tokens</li>
+                      <li><b>ML:</b> experimented with RandomForest and TensorFlow-based approaches</li>
+                      <li><b>Realtime:</b> used MediaPipe for hand tracking on webcam frames</li>
+                    </ul>
                   </div>
-                  <h4 class="mini-h" style="margin-top: 14px;">What I’d do next</h4>
-                  <ul class="bullets">
-                    <li>Improve temporal smoothing to reduce irregular variations in predictions</li>
-                    <li>Turn it into a simple web demo and publish a short case study</li>
-                  </ul>
+                  <div>
+                    <h4 class="mini-h">Tech</h4>
+                    <div class="tags">
+                      <span class="tag">Python</span>
+                      <span class="tag">MediaPipe</span>
+                      <span class="tag">RandomForest</span>
+                      <span class="tag">TensorFlow</span>
+                    </div>
+                    <h4 class="mini-h" style="margin-top: 14px;">Next Steps</h4>
+                    <ul class="bullets">
+                      <li>Improve temporal smoothing to reduce jitter</li>
+                      <li>Turn it into a simple web demo</li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-
-              <div class="actions">
-                <a class="btn" href="https://github.com/JackCarluccio/asl-translation-aid" target="_blank" rel="noopener">
-                  <i class="fa-brands fa-github" aria-hidden="true"></i> Code
-                </a>
-                <a class="btn btn-ghost" href="#contact">
-                  <i class="fa-regular fa-file-lines" aria-hidden="true"></i> Ask me about it
-                </a>
+                <div class="actions">
+                  <a class="btn" href="https://github.com/JackCarluccio/asl-translation-aid" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i> Code
+                  </a>
+                </div>
               </div>
             </div>
-          </details>
-          
-          <details class="card expando">
-            <summary class="expando-summary">
-              <div class="expando-core">
-                <h3 class="expando-title">Pittsburgh Neighborhood Health Analysis</h3>
-                <p class="expando-one">
-                  Neighborhood-level ranking using public datasets to analyze recreation access and community indicators.
-                </p>
-              </div>
-              <div class="expando-meta">
-                <span class="time">Course project • Sep–Dec 2024</span>
-                <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
-              </div>
-            </summary>
+          </div>
 
-            <div class="expando-body">
-              <p class="desc">
-                Aggregated and analyzed public datasets across Pittsburgh neighborhoods and produced visual insights + a
-                composite metric for comparison.
+          <div class="card project-card" tabindex="0">
+            <div class="card-image-wrapper">
+              <img src="projectASL.jpg" alt="Neighborhood Analysis" class="card-cover" />
+            </div>
+            <div class="card-content">
+              <div class="card-header">
+                <h3 class="card-title">Pittsburgh Health Analysis</h3>
+                <span class="time">Sep–Dec 2024</span>
+              </div>
+              <p class="card-summary">
+                Neighborhood-level ranking using public datasets to analyze recreation access.
               </p>
-
-              <div class="split">
-                <div>
-                  <h4 class="mini-h">Highlights</h4>
-                  <ul class="bullets">
-                    <li><b>Data cleaning:</b> merged multiple sources across 90 neighborhoods</li>
-                    <li><b>Geo:</b> used GeoPandas for neighborhood-level joins and spatial context</li>
-                    <li><b>Visualization:</b> created 10+ Matplotlib charts to show patterns + tradeoffs</li>
-                    <li><b>Composite indicator:</b> built a simple scoring system to compare neighborhood well-being</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 class="mini-h">Tech</h4>
-                  <div class="tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">Pandas</span>
-                    <span class="tag">GeoPandas</span>
-                    <span class="tag">Matplotlib</span>
-                    <span class="tag">Data storytelling</span>
+              <div class="modal-data" hidden>
+                <p class="desc">
+                  Aggregated and analyzed public datasets across Pittsburgh neighborhoods to produce visual insights.
+                </p>
+                <div class="split">
+                  <div>
+                    <h4 class="mini-h">Highlights</h4>
+                    <ul class="bullets">
+                      <li><b>Data cleaning:</b> merged multiple sources across 90 neighborhoods</li>
+                      <li><b>Geo:</b> used GeoPandas for neighborhood-level joins</li>
+                      <li><b>Visualization:</b> created 10+ Matplotlib charts</li>
+                    </ul>
                   </div>
-
-                  <h4 class="mini-h" style="margin-top: 14px;">What I’d do next</h4>
-                  <ul class="bullets">
-                    <li>Document data sources and assumptions more formally</li>
-                    <li>Turn the score into an interactive map</li>
-                    <li>Add sensitivity analysis for weighting choices</li>
-                  </ul>
+                  <div>
+                    <h4 class="mini-h">Tech</h4>
+                    <div class="tags">
+                      <span class="tag">Python</span>
+                      <span class="tag">Pandas</span>
+                      <span class="tag">GeoPandas</span>
+                      <span class="tag">Matplotlib</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-
-              <div class="actions">
-                <a class="btn" href="https://github.com/amluu/NeighborhoodProject" target="_blank" rel="noopener">
-                  <i class="fa-brands fa-github" aria-hidden="true"></i> Code
-                </a>
-                <a class="btn btn-ghost" href="#contact">
-                  <i class="fa-regular fa-file-lines" aria-hidden="true"></i> Ask me about it
-                </a>
+                <div class="actions">
+                  <a class="btn" href="https://github.com/amluu/NeighborhoodProject" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i> Code
+                  </a>
+                </div>
               </div>
             </div>
-          </details>
-          
-          <details class="card expando">
-            <summary class="expando-summary">
-              <div class="expando-core">
-                <h3 class="expando-title">Sankofa Village Projects Website</h3>
-                <p class="expando-one">
-                  Organized program resources into a clear, accessible website for students and community participants.
-                </p>
-              </div>
-              <div class="expando-meta">
+          </div>
+
+          <div class="card project-card" tabindex="0">
+            <div class="card-image-wrapper">
+              <img src="projectASL.jpg" alt="Sankofa Website" class="card-cover" />
+            </div>
+            <div class="card-content">
+              <div class="card-header">
+                <h3 class="card-title">Sankofa Village Website</h3>
                 <span class="time">Feb–May 2025</span>
-                <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
               </div>
-            </summary>
-
-            <div class="expando-body">
-              <p class="desc">
-                Built an information structure that makes program materials easy to find, understand, and use — especially
-                for non-technical users.
+              <p class="card-summary">
+                Organized program resources into a clear, accessible website for the community.
               </p>
-
-              <div class="split">
-                <div>
-                  <h4 class="mini-h">Highlights</h4>
-                  <ul class="bullets">
-                    <li><b>Information architecture:</b> structured content for 10–15 participants</li>
-                    <li><b>Accessibility:</b> focused on clarity, navigation, and usability</li>
-                    <li><b>Content:</b> organized resources around learning goals and weekly flow</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 class="mini-h">Skills</h4>
-                  <div class="tags">
-                    <span class="tag">Web</span>
-                    <span class="tag">Content design</span>
-                    <span class="tag">Accessibility</span>
-                    <span class="tag">Usability</span>
+              <div class="modal-data" hidden>
+                <div class="split">
+                  <div>
+                    <h4 class="mini-h">Highlights</h4>
+                    <ul class="bullets">
+                      <li><b>Info Architecture:</b> structured content for 10–15 participants</li>
+                      <li><b>Accessibility:</b> focused on clarity and screen-reader navigation</li>
+                    </ul>
                   </div>
-
-                  <h4 class="mini-h" style="margin-top: 14px;">What I’d do next</h4>
-                  <ul class="bullets">
-                    <li>Add search + quick navigation for large resource lists</li>
-                    <li>Create a “starter path” for new participants</li>
-                  </ul>
+                  <div>
+                    <h4 class="mini-h">Tech</h4>
+                    <div class="tags">
+                      <span class="tag">Web Design</span>
+                      <span class="tag">Accessibility</span>
+                      <span class="tag">HTML/CSS</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-
-              <div class="actions">
-                <a class="btn btn-ghost" href="#contact">
-                  <i class="fa-regular fa-file-lines" aria-hidden="true"></i> Ask me about it
-                </a>
               </div>
             </div>
-          </details>
-          
-          <details class="card expando">
-            <summary class="expando-summary">
-              <div class="expando-core">
-                <h3 class="expando-title">Personal Portfolio Website</h3>
-                <p class="expando-one">
-                  A clean, accessible, and responsive portfolio site built from scratch to showcase my work.
-                </p>
-              </div>
-              <div class="expando-meta">
+          </div>
+
+          <div class="card project-card" tabindex="0">
+            <div class="card-image-wrapper">
+              <img src="projectASL.jpg" alt="Portfolio" class="card-cover" />
+            </div>
+            <div class="card-content">
+              <div class="card-header">
+                <h3 class="card-title">Personal Portfolio</h3>
                 <span class="time">Jan 2026</span>
-                <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
               </div>
-            </summary>
-
-            <div class="expando-body">
-              <p class="desc">
-                Designed and developed a personal website to display my academic and technical projects. I prioritized semantic 
-                HTML, modern CSS variables, and accessibility over using heavy frameworks.
+              <p class="card-summary">
+                A clean, accessible, and responsive portfolio site built from scratch.
               </p>
-
-              <div class="split">
-                <div>
-                  <h4 class="mini-h">Highlights</h4>
-                  <ul class="bullets">
-                    <li><b>No Frameworks:</b> Built with pure HTML/CSS to ensure lightweight performance</li>
-                    <li><b>Responsive:</b> Uses CSS Grid and clamp functions for fluid scaling on mobile/desktop</li>
-                    <li><b>Accessibility:</b> Semantic tags, high contrast, and keyboard navigation support</li>
-                    <li><b>Design:</b> Custom glass-morphism aesthetic with CSS variables for easy theming</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 class="mini-h">Tech</h4>
-                  <div class="tags">
-                    <span class="tag">HTML5</span>
-                    <span class="tag">CSS3</span>
-                    <span class="tag">Responsive Design</span>
-                    <span class="tag">Accessibility</span>
+              <div class="modal-data" hidden>
+                <div class="split">
+                  <div>
+                    <h4 class="mini-h">Highlights</h4>
+                    <ul class="bullets">
+                      <li><b>No Frameworks:</b> Built with pure HTML/CSS</li>
+                      <li><b>Responsive:</b> Uses CSS Grid and clamp functions</li>
+                      <li><b>Design:</b> Custom glass-morphism aesthetic</li>
+                    </ul>
                   </div>
-
-                  <h4 class="mini-h" style="margin-top: 14px;">What I’d do next</h4>
-                  <ul class="bullets">
-                    <li>Implement a light/dark mode toggle</li>
-                    <li>Add a blog section for technical writing</li>
-                    <li>Make the cards more engaging</li>
-                  </ul>
+                  <div>
+                    <h4 class="mini-h">Tech</h4>
+                    <div class="tags">
+                      <span class="tag">HTML5</span>
+                      <span class="tag">CSS3</span>
+                      <span class="tag">Responsive</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-
-              <div class="actions">
-                <a class="btn" href="https://github.com/KoljaHribar" target="_blank" rel="noopener">
-                  <i class="fa-brands fa-github" aria-hidden="true"></i> View Repo
-                </a>
+                <div class="actions">
+                  <a class="btn" href="https://github.com/KoljaHribar" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i> Repo
+                  </a>
+                </div>
               </div>
             </div>
-          </details>
+          </div>
 
-           <details class="card expando">
-            <summary class="expando-summary">
-              <div class="expando-core">
-                <h3 class="expando-title">Crossy Roads 1 Hour Gemini Challenge</h3>
-                <p class="expando-one">
-                  A challenge to recreate the classic arcade game Crossy Roads using Gemini 3.
-                </p>
+          <div class="card project-card" tabindex="0">
+            <div class="card-image-wrapper">
+              <img src="projectASL.jpg" alt="Crossy Roads Game" class="card-cover" />
+            </div>
+            <div class="card-content">
+              <div class="card-header">
+                <h3 class="card-title">Crossy Roads AI Challenge</h3>
+                <span class="time">Spring 2026</span>
               </div>
-              <div class="expando-meta">
-                <span class="time">School Work Project • Spring 2026</span>
-                <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
-              </div>
-            </summary>
-
-            <div class="expando-body">
-              <img src="game.jpg" alt="Screenshot of the Crossy Roads game clone showing player character and obstacles" class="project-showcase" />
-              
-              <p class="desc">
-                Developed a functional clone of Crossy Roads by prompting Gemini 3 to make step by step changes.
+              <p class="card-summary">
+                Recreating the classic arcade game using Gemini 3 and Pygame.
               </p>
-
-              <div class="split">
-                <div>
-                  <h4 class="mini-h">Highlights</h4>
-                  <ul class="bullets">
-                    <li><b>OOP Design:</b> Structured game objects (player, obstacles, terrain) using inheritance and polymorphism</li>
-                    <li><b>Game Loop:</b> Implemented a real-time update and render cycle for smooth gameplay</li>
-                    <li><b>Collision Detection:</b> Created bounding-box logic to handle interactions between the player and traffic</li>
-                    <li><b>State Management:</b> Managed game states (menu, playing, game over) and score tracking</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 class="mini-h">Tech</h4>
-                  <div class="tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">OOP</span>
-                    <span class="tag">Pygame</span>
-                    <span class="tag">GUI</span>
+              <div class="modal-data" hidden>
+                <div class="split">
+                  <div>
+                    <h4 class="mini-h">Highlights</h4>
+                    <ul class="bullets">
+                      <li><b>OOP Design:</b> Structured game objects using inheritance</li>
+                      <li><b>Game Loop:</b> Implemented real-time update/render cycle</li>
+                      <li><b>Collision:</b> Created bounding-box logic</li>
+                    </ul>
                   </div>
-
-                  <h4 class="mini-h" style="margin-top: 14px;">What I’d do next</h4>
-                  <ul class="bullets">
-                    <li>Add sound affects and animations to the game</li>
-                    <li>Improve the looks of objects and the background</li>
-                    <li>Add more fun and exciting features to the game</li>
-                  </ul>
+                  <div>
+                    <h4 class="mini-h">Tech</h4>
+                    <div class="tags">
+                      <span class="tag">Python</span>
+                      <span class="tag">Pygame</span>
+                      <span class="tag">OOP</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-
-              <div class="actions">
-                <a class="btn" href="https://github.com/KoljaHribar/Crossy-Road-with-AI-Challenge/tree/main" target="_blank" rel="noopener">
-                  <i class="fa-brands fa-github" aria-hidden="true"></i> Code
-                </a>
-                <a class="btn btn-ghost" href="#contact">
-                  <i class="fa-regular fa-file-lines" aria-hidden="true"></i> Ask me about it
-                </a>
+                <div class="actions">
+                  <a class="btn" href="https://github.com/KoljaHribar/Crossy-Road-with-AI-Challenge/tree/main" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i> Code
+                  </a>
+                </div>
               </div>
             </div>
-          </details>
+          </div>
 
         </div>
       </section>
@@ -386,51 +291,34 @@
         <div class="section-head">
           <h2>Experience</h2>
         </div>
-
         <div class="grid expando-grid">
           <details class="card expando">
             <summary class="expando-summary">
               <div class="expando-core">
                 <h3 class="expando-title">Krka Pharmaceuticals — Intern</h3>
-                <p class="expando-one">Supported enterprise data workflows and learned how data moves across systems.</p>
+                <p class="expando-one">Supported enterprise data workflows.</p>
               </div>
               <div class="expando-meta">
-                <span class="time">Jul–Aug 2025 • Novo Mesto, Slovenia</span>
+                <span class="time">Jul–Aug 2025</span>
                 <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
               </div>
             </summary>
-
             <div class="expando-body">
-              <p class="desc">
-                Worked in a pharmaceutical environment with real business processes, internal datasets, and cross-team
-                communication.
-              </p>
-
               <div class="split">
                 <div>
                   <h4 class="mini-h">What I did</h4>
                   <ul class="bullets">
-                    <li><b>SQL:</b> performed joins on internal company datasets to support reporting needs</li>
-                    <li><b>SAP workflows:</b> observed and assisted with structured business processes</li>
-                    <li><b>APIs:</b> reviewed and documented integrations using M-Files</li>
-                    <li><b>Collaboration:</b> worked with IT + business teams on how systems connect</li>
+                    <li><b>SQL:</b> performed joins on internal company datasets</li>
+                    <li><b>SAP:</b> assisted with structured business processes</li>
                   </ul>
                 </div>
-
                 <div>
-                  <h4 class="mini-h">Skills used</h4>
+                  <h4 class="mini-h">Skills</h4>
                   <div class="tags">
                     <span class="tag">SQL</span>
                     <span class="tag">SAP</span>
-                    <span class="tag">APIs</span>
-                    <span class="tag">Documentation</span>
-                    <span class="tag">Enterprise systems</span>
+                    <span class="tag">Enterprise</span>
                   </div>
-
-                  <h4 class="mini-h" style="margin-top: 14px;">Key takeaway</h4>
-                  <p class="desc">
-                    I got my first real view of how “messy real life” data becomes structured business decisions.
-                  </p>
                 </div>
               </div>
             </div>
@@ -440,190 +328,95 @@
             <summary class="expando-summary">
               <div class="expando-core">
                 <h3 class="expando-title">University of Pittsburgh — Teaching Assistant</h3>
-                <p class="expando-one">Helped students build strong foundations in Java, debugging, and problem-solving.</p>
+                <p class="expando-one">Java course support and debugging help.</p>
               </div>
               <div class="expando-meta">
-                <span class="time">Fall 2025 – Spring 2026 • Pittsburgh, PA</span>
+                <span class="time">Fall 2025 – Present</span>
                 <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
               </div>
             </summary>
-
             <div class="expando-body">
-              <p class="desc">
-                Supported an introductory Java course with labs, office hours, and structured help for debugging and core
-                concepts.
-              </p>
-
               <div class="split">
                 <div>
                   <h4 class="mini-h">What I did</h4>
                   <ul class="bullets">
                     <li><b>Led:</b> weekly lab sessions for ~20 students</li>
-                    <li><b>Debugging:</b> helped students systematically find and fix issues</li>
-                    <li><b>Teaching:</b> explained fundamentals clearly (loops, arrays, methods, OOP basics)</li>
-                    <li><b>Support:</b> held office hours and guided students through assignments</li>
+                    <li><b>Debugging:</b> helped students fix code logic</li>
                   </ul>
                 </div>
-
                 <div>
-                  <h4 class="mini-h">Skills used</h4>
+                  <h4 class="mini-h">Skills</h4>
                   <div class="tags">
                     <span class="tag">Java</span>
                     <span class="tag">Teaching</span>
-                    <span class="tag">Communication</span>
                     <span class="tag">Debugging</span>
-                    <span class="tag">Mentorship</span>
                   </div>
-
-                  <h4 class="mini-h" style="margin-top: 14px;">Key takeaway</h4>
-                  <p class="desc">
-                    Teaching made me faster at diagnosing code and explaining technical ideas in simple steps.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </details>
-
-          <details class="card expando">
-            <summary class="expando-summary">
-              <div class="expando-core">
-                <h3 class="expando-title">University of Pittsburgh — Peer Tutor</h3>
-                <p class="expando-one">Tutored students in discrete math reasoning and Java programming fundamentals.</p>
-              </div>
-              <div class="expando-meta">
-                <span class="time">Spring 2026 • Pittsburgh, PA</span>
-                <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
-              </div>
-            </summary>
-
-            <div class="expando-body">
-              <p class="desc">
-                Delivered 1:1 and small-group tutoring focused on building confidence, reasoning skills, and repeatable
-                problem-solving habits.
-              </p>
-
-              <div class="split">
-                <div>
-                  <h4 class="mini-h">What I did</h4>
-                  <ul class="bullets">
-                    <li><b>Discrete Structures:</b> logic, proofs, sets, relations, induction</li>
-                    <li><b>Intro Programming:</b> Java fundamentals, debugging strategies, code reading</li>
-                    <li><b>Coaching:</b> helped students develop step-by-step approaches to problems</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 class="mini-h">Skills used</h4>
-                  <div class="tags">
-                    <span class="tag">Discrete Math</span>
-                    <span class="tag">Java</span>
-                    <span class="tag">Communication</span>
-                    <span class="tag">Problem Solving</span>
-                    <span class="tag">Mentorship</span>
-                  </div>
-
-                  <h4 class="mini-h" style="margin-top: 14px;">Key takeaway</h4>
-                  <p class="desc">
-                    The best explanations are structured like algorithms: clear inputs, steps, and checks.
-                  </p>
                 </div>
               </div>
             </div>
           </details>
         </div>
       </section>
-      
+
       <section id="about" class="section">
         <h2>About</h2>
         <p>
-          I’m a Data Science and Computer Science student at the University of Pittsburgh with a strong foundation in
-          mathematics and logical problem-solving. I’m drawn to problems where structure, efficiency, and clear reasoning
-          matter, and where the goal is not just a solution, but the best one.
-        </p>
-
-        <p>
-          I like projects that combine data, algorithms, and real-world impact (healthcare, transportation/logistics, and
-          sports analytics). I’m building experience across Python, Java, SQL, and ML, and I enjoy turning messy,
-          unstructured inputs into tools people can actually use.
-        </p>
-
-        <p>
-          Outside academics, I play water polo and basketball. Those teams taught me discipline, iteration, and how to
-          perform under pressure, which translates surprisingly well to engineering.
+          I’m a Data Science and Computer Science student at the University of Pittsburgh. I’m drawn to problems where structure, efficiency, and clear reasoning matter. Outside academics, I play water polo and basketball—teams that taught me discipline and iteration.
         </p>
       </section>
 
       <section id="contact" class="section">
         <h2>Contact</h2>
-        <p>You can reach me here:</p>
-
         <ul class="contact-list">
           <li>
             <span>Email</span>
-            <a class="icon-btn" href="mailto:kolja.hribar@gmail.com" aria-label="Email">
-              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-            </a>
+            <a class="icon-btn" href="mailto:kolja.hribar@gmail.com"><i class="fa-solid fa-envelope"></i></a>
           </li>
-
           <li>
             <span>LinkedIn</span>
-            <a
-              class="icon-btn"
-              href="https://www.linkedin.com/in/kolja-hribar/"
-              target="_blank"
-              rel="noopener"
-              aria-label="LinkedIn"
-            >
-              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
-            </a>
+            <a class="icon-btn" href="https://www.linkedin.com/in/kolja-hribar/"><i class="fa-brands fa-linkedin-in"></i></a>
           </li>
-
           <li>
             <span>GitHub</span>
-            <a class="icon-btn" href="https://github.com/KoljaHribar" target="_blank" rel="noopener" aria-label="GitHub">
-              <i class="fa-brands fa-github" aria-hidden="true"></i>
-            </a>
+            <a class="icon-btn" href="https://github.com/KoljaHribar"><i class="fa-brands fa-github"></i></a>
           </li>
         </ul>
       </section>
     </main>
+
     <footer class="footer">
       <div class="container footer-row">
         <div class="footer-info">
           <p>&copy; 2026 Kolja Hribar</p>
-          <p class="credit-small">Original layout/some preliminary wording created with ChatGPT 5.2, Jan 2026</p>
         </div>
         <a class="backtop" href="#top">Back to top ↑</a>
       </div>
     </footer>
-    
-    <script>
-      /* Scroll Reset */
-      if (history.scrollRestoration) {
-        history.scrollRestoration = 'manual';
-      } else {
-        window.onbeforeunload = function () {
-          window.scrollTo(0, 0);
-        }
-      }
 
-      /* Theme Logic */
-      const toggleBtn = document.getElementById('theme-toggle');
-      const html = document.documentElement;
-      
-      const savedTheme = localStorage.getItem('theme');
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      const initialTheme = savedTheme || systemTheme;
-      
-      html.setAttribute('data-theme', initialTheme);
-
-      toggleBtn.addEventListener('click', () => {
-        const currentTheme = html.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    <div id="project-modal" class="modal" aria-hidden="true">
+      <div class="modal-backdrop"></div>
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
         
-        html.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-      });
-    </script>
+        <div class="modal-image-container">
+          <img src="" alt="" id="modal-img" />
+        </div>
+        
+        <div class="modal-body">
+          <div class="modal-header-row">
+            <h2 id="modal-title"></h2>
+            <span id="modal-date" class="time"></span>
+          </div>
+          <p id="modal-summary" class="hero-sub"></p>
+          
+          <div id="modal-details">
+            </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="script.js"></script>
   </body>
 </html>
