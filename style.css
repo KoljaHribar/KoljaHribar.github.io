@@ -648,3 +648,37 @@ section.section h2::before{
   .icon-btn{ transition:none; }
   .expando-body{ animation:none; }
 }
+
+/* --- Discord Status Updates --- */
+
+/* The dot itself */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #747f8d; /* Default Grey */
+  display: inline-block;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+/* Status Colors */
+.kicker.online .status-dot  { background-color: #43b581; box-shadow: 0 0 8px #43b581; }
+.kicker.idle .status-dot    { background-color: #faa61a; box-shadow: 0 0 8px #faa61a; }
+.kicker.dnd .status-dot     { background-color: #f04747; box-shadow: 0 0 8px #f04747; }
+.kicker.offline .status-dot { background-color: #747f8d; }
+
+/* Pulse Animation for Online */
+.kicker.online .status-dot {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Remove the original static dot from the kicker */
+#discord-status::before {
+  display: none; 
+}
