@@ -357,16 +357,11 @@ section.section{
 }
 
 section.section h2{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-}
-section.section h2::before{
-  content:"";
-  width:10px;
-  height:10px;
-  border-radius:999px;
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  display: flex;             /* Changed from inline-flex to flex (takes full width) */
+  justify-content: center;   /* Centers the dot and text horizontally */
+  align-items: center;
+  gap: 10px;
+  width: 100%;               /* Ensures the header spans edge-to-edge */
 }
 
 .section-head{ margin-bottom: 14px; }
