@@ -682,3 +682,77 @@ section.section h2::before{
 #discord-status::before {
   display: none; 
 }
+
+/* ============================
+   CHAMELEON BACKGROUND MODES
+   ============================ */
+
+/* --- 1. CODING MODE (Unchanged - Keeps the Cyber Vibe) --- */
+body.mode-coding {
+  --wave-1: rgba(120, 80, 255, 0.6);
+  --wave-2: rgba(0, 255, 255, 0.25);
+  --wave-3: rgba(255, 0, 150, 0.2);
+}
+[data-theme="dark"] body.mode-coding {
+  --bg-color: #0d001a;
+  --wave-1: rgba(90, 40, 200, 0.7);
+  --wave-2: rgba(0, 200, 200, 0.3);
+}
+
+/* --- 2. OFFLINE MODE (NEW: Dusk & Midnight Aurora) --- */
+body.mode-offline {
+  /* Light Mode: "Dusk" (Warm Grey + Muted Indigo + Soft Peach) */
+  --wave-1: rgba(85, 96, 120, 0.6);  /* Muted Indigo */
+  --wave-2: rgba(200, 180, 160, 0.4); /* Sand/Peach */
+  --wave-3: rgba(50, 50, 60, 0.1);    /* Dark Grey Shadow */
+}
+[data-theme="dark"] body.mode-offline {
+  /* Dark Mode: "Midnight Aurora" (Deep Navy + Slate + Silver) */
+  --bg-color: #050a14; /* Deep Navy Black */
+  --wave-1: rgba(40, 60, 90, 0.8);    /* Deep Blue */
+  --wave-2: rgba(100, 115, 130, 0.3); /* Slate Blue */
+  --wave-3: rgba(255, 255, 255, 0.05); /* Faint Silver Mist */
+}
+
+/* --- FLOATING STATUS ICONS (SCATTERED) --- */
+.status-floater {
+  position: absolute; /* Changed from fixed to absolute so they scroll away */
+  top: 15%;           /* Sit near the hero section */
+  height: 600px;      /* Tall container to spread icons out */
+  width: 150px;       /* Width constraint */
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; /* Spread them vertically */
+  opacity: 0.06;      /* Subtle watermark */
+  pointer-events: none; /* Ignore clicks */
+}
+
+.left-floater { left: 2%; }
+.right-floater { right: 2%; align-items: flex-end; }
+
+/* Icon Styling */
+.status-floater i { 
+  display: none; 
+  font-size: 60px; /* Base size */
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1); /* Bouncy transition */
+}
+
+/* Visibility Logic */
+body.mode-coding .icon-coding { display: block; opacity: 1; transform: scale(1); }
+body.mode-offline .icon-offline { display: block; opacity: 1; transform: scale(1); }
+body:not(.mode-coding):not(.mode-offline) .icon-online { display: block; opacity: 1; transform: scale(1); }
+
+/* --- SCATTER VARIATIONS (Randomize Sizes & Rotations) --- */
+.status-floater i:nth-child(1) { font-size: 80px; transform: rotate(-10deg); }
+.status-floater i:nth-child(2) { font-size: 50px; transform: rotate(15deg); opacity: 0.7; }
+.status-floater i:nth-child(3) { font-size: 100px; transform: rotate(-5deg); opacity: 0.4; }
+
+/* Gentle Float Animation */
+.status-floater i { animation: floatIcon 8s ease-in-out infinite; }
+.status-floater i:nth-child(even) { animation-duration: 10s; animation-delay: -2s; }
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(4deg); }
+}

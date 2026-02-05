@@ -32,6 +32,7 @@ if (toggleBtn) {
     localStorage.setItem('theme', newTheme);
   });
 }
+
 /* ============================
    3. DISCORD STATUS (Lanyard API)
    ============================ */
@@ -50,41 +51,40 @@ async function fetchDiscordStatus() {
       const kv = data.data;
       const { discord_status, activities } = kv;
 
-      // 1. Set Status Color
+      // 1. Reset Status Pill Colors
       discordStatus.classList.remove('online', 'idle', 'dnd', 'offline');
       discordStatus.classList.add(discord_status);
 
-      // 2. Offline Check
+      // --- NEW: RESET BACKGROUND MODE ---
+      document.body.classList.remove('mode-coding', 'mode-offline');
+
+      // 2. Offline Logic
       if (discord_status === 'offline') {
         statusText.textContent = "Status: Offline";
+        document.body.classList.add('mode-offline'); // Trigger Grey Waves + Moon Icons
         return;
       }
 
       let activityText = "Online";
+      let isCoding = false; // Flag to check if we should trigger Coding Mode
 
       if (activities && activities.length > 0) {
-        // Find VS Code
         const vscode = activities.find(a => a.name === 'Visual Studio Code' || a.name === 'Code');
         const spotify = kv.listening_to_spotify ? kv.spotify : null;
 
         if (vscode) {
-          // SWAPPED PRIORITY: Your extension puts the file in 'state', not 'details'
-          // We grab 'state' ("Working on script.js...") first.
+          isCoding = true; // FOUND CODE!
+          
           let rawText = vscode.state || vscode.details || "VS Code";
-
-          // CLEANUP LOGIC:
-          // 1. Remove "Working on", "Editing", "In"
-          // 2. Remove line numbers at the end (e.g., :101:39)
-          // 3. Remove "problems found" noise
           const cleanText = rawText
-            .replace(/^Working on |^Editing |^In /g, '') 
-            .replace(/:\d+:\d+$/, '') // Regex to strip :10:39 line numbers
+            .replace(/^Working on |^Editing |^Viewing |^In /g, '') 
+            .replace(/:\d+:\d+$/, '') 
             .replace(/ - \d+ problems? found/g, ''); 
 
           activityText = `Coding -> ${cleanText}`;
         } 
         else if (spotify) {
-          activityText = `Listening: ${spotify.song}`;
+          activityText = `Listening to ${spotify.song}`;
         } 
         else {
           const game = activities.find(a => a.name !== 'Custom Status');
@@ -92,11 +92,17 @@ async function fetchDiscordStatus() {
         }
       }
 
+      // --- NEW: APPLY BACKGROUND MODE ---
+      if (isCoding) {
+        document.body.classList.add('mode-coding'); // Trigger Purple Waves + Code Icons
+      }
+
       statusText.textContent = `Status: ${activityText}`;
     }
   } catch (error) {
     console.error('Lanyard Error:', error);
     statusText.textContent = "Status: Offline";
+    document.body.classList.add('mode-offline');
   }
 }
 
