@@ -4,44 +4,54 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Kolja Hribar | Data Science Portfolio</title>
-
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="kolja_photo.jpg" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   </head>
 
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-
     <div class="bg-wave wave-1" aria-hidden="true"></div>
     <div class="bg-wave wave-2" aria-hidden="true"></div>
     <div class="bg-wave wave-3" aria-hidden="true"></div>
 
+    <div class="status-floater left-floater" aria-hidden="true">
+      <i class="fa-solid fa-code icon-coding"></i>
+      <i class="fa-solid fa-terminal icon-coding" style="margin-left: 40px;"></i>
+      <i class="fa-brands fa-js icon-coding" style="margin-left: -20px;"></i>
+      <i class="fa-solid fa-bed icon-offline"></i>
+      <i class="fa-solid fa-moon icon-offline" style="margin-left: 30px;"></i>
+      <i class="fa-solid fa-power-off icon-offline" style="margin-left: -10px;"></i>
+      <i class="fa-solid fa-wifi icon-online"></i>
+      <i class="fa-solid fa-bolt icon-online" style="margin-left: 25px;"></i>
+    </div>
+
+    <div class="status-floater right-floater" aria-hidden="true">
+      <i class="fa-brands fa-python icon-coding"></i>
+      <i class="fa-solid fa-bug icon-coding" style="margin-right: 30px;"></i>
+      <i class="fa-solid fa-laptop-code icon-coding" style="margin-right: -20px;"></i>
+      <i class="fa-solid fa-eye-slash icon-offline"></i>
+      <i class="fa-solid fa-mug-hot icon-offline" style="margin-right: 40px;"></i>
+      <i class="fa-solid fa-battery-quarter icon-offline"></i>
+      <i class="fa-solid fa-briefcase icon-online"></i>
+      <i class="fa-solid fa-globe icon-online" style="margin-right: 35px;"></i>
+    </div>
+
     <header class="hero" id="top">
       <div class="container hero-grid">
         <div class="hero-left">
-          <p class="kicker">Student • Data Science • Pittsburgh</p>
+          <div id="discord-status" class="kicker">
+            <span class="status-dot"></span>
+            <span id="status-text">Status: Loading...</span>
+          </div>
           <h1>Hello, it’s <span class="gradient-text">Kolja</span></h1>
           <p class="hero-sub">
-            I’m an international student from Slovenia studying Data Science and Computer Science at the University of
-            Pittsburgh. I build practical and clean tools for analysis, turning messy data into clear insights and reliable
-            software.
+            I’m an international student from Slovenia studying Data Science and Computer Science at Pitt. I build practical tools for analysis, turning messy data into clear insights.
           </p>
           <div class="hero-row">
             <div class="icon-row" aria-label="Contact links">
-              <a class="icon-btn" href="https://github.com/KoljaHribar" target="_blank" rel="noopener" aria-label="GitHub">
-                <i class="fa-brands fa-github" aria-hidden="true"></i>
-              </a>
-              <a class="icon-btn" href="https://www.linkedin.com/in/kolja-hribar/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
-              </a>
-              <a class="icon-btn" href="mailto:kolja.hribar@gmail.com" aria-label="Email">
-                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-              </a>
+              <a class="icon-btn" href="https://github.com/KoljaHribar" target="_blank"><i class="fa-brands fa-github"></i></a>
+              <a class="icon-btn" href="https://www.linkedin.com/in/kolja-hribar/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a class="icon-btn" href="mailto:kolja.hribar@gmail.com"><i class="fa-solid fa-envelope"></i></a>
             </div>
           </div>
         </div>
@@ -86,7 +96,7 @@
             <div class="card-content">
               <div class="card-header">
                 <h3 class="card-title">ASL Translation Aid</h3>
-                <span class="time">Hackathon • Sep 2025</span>
+                <span class="time">Hackathon • 2025</span>
               </div>
               <p class="card-summary">
                 Real-time ASL gesture → text prototype using hand landmarks and classification.
@@ -99,7 +109,6 @@
                       <li><b>Inference loop:</b> designed a frame → landmarks → model → output flow</li>
                       <li><b>Structure:</b> created clear data objects for gestures and predicted tokens</li>
                       <li><b>ML:</b> experimented with RandomForest and TensorFlow-based approaches</li>
-                      <li><b>Realtime:</b> used MediaPipe for hand tracking on webcam frames</li>
                     </ul>
                   </div>
                   <div>
@@ -107,20 +116,12 @@
                     <div class="tags">
                       <span class="tag">Python</span>
                       <span class="tag">MediaPipe</span>
-                      <span class="tag">RandomForest</span>
                       <span class="tag">TensorFlow</span>
                     </div>
-                    <h4 class="mini-h" style="margin-top: 14px;">Next Steps</h4>
-                    <ul class="bullets">
-                      <li>Improve temporal smoothing to reduce jitter</li>
-                      <li>Turn it into a simple web demo</li>
-                    </ul>
                   </div>
                 </div>
                 <div class="actions">
-                  <a class="btn" href="https://github.com/JackCarluccio/asl-translation-aid" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-github"></i> Code
-                  </a>
+                  <a class="btn" href="https://github.com/JackCarluccio/asl-translation-aid" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
                 </div>
               </div>
             </div>
@@ -162,9 +163,7 @@
                   </div>
                 </div>
                 <div class="actions">
-                  <a class="btn" href="https://github.com/amluu/NeighborhoodProject" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-github"></i> Code
-                  </a>
+                  <a class="btn" href="https://github.com/amluu/NeighborhoodProject" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
                 </div>
               </div>
             </div>
@@ -172,41 +171,7 @@
 
           <div class="card project-card" tabindex="0">
             <div class="card-image-wrapper">
-              <img src="projectASL.jpg" alt="Sankofa Website" class="card-cover" />
-            </div>
-            <div class="card-content">
-              <div class="card-header">
-                <h3 class="card-title">Sankofa Village Website</h3>
-                <span class="time">Feb–May 2025</span>
-              </div>
-              <p class="card-summary">
-                Organized program resources into a clear, accessible website for the community.
-              </p>
-              <div class="modal-data" hidden>
-                <div class="split">
-                  <div>
-                    <h4 class="mini-h">Highlights</h4>
-                    <ul class="bullets">
-                      <li><b>Info Architecture:</b> structured content for 10–15 participants</li>
-                      <li><b>Accessibility:</b> focused on clarity and screen-reader navigation</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 class="mini-h">Tech</h4>
-                    <div class="tags">
-                      <span class="tag">Web Design</span>
-                      <span class="tag">Accessibility</span>
-                      <span class="tag">HTML/CSS</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card project-card" tabindex="0">
-            <div class="card-image-wrapper">
-              <img src="projectASL.jpg" alt="Portfolio" class="card-cover" />
+              <img src="kolja_photo.jpg" alt="Portfolio" class="card-cover" />
             </div>
             <div class="card-content">
               <div class="card-header">
@@ -223,7 +188,7 @@
                     <ul class="bullets">
                       <li><b>No Frameworks:</b> Built with pure HTML/CSS</li>
                       <li><b>Responsive:</b> Uses CSS Grid and clamp functions</li>
-                      <li><b>Design:</b> Custom glass-morphism aesthetic</li>
+                      <li><b>Live Status:</b> Integrated Lanyard API for real-time Discord presence</li>
                     </ul>
                   </div>
                   <div>
@@ -231,14 +196,12 @@
                     <div class="tags">
                       <span class="tag">HTML5</span>
                       <span class="tag">CSS3</span>
-                      <span class="tag">Responsive</span>
+                      <span class="tag">JavaScript</span>
                     </div>
                   </div>
                 </div>
                 <div class="actions">
-                  <a class="btn" href="https://github.com/KoljaHribar" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-github"></i> Repo
-                  </a>
+                  <a class="btn" href="https://github.com/KoljaHribar" target="_blank"><i class="fa-brands fa-github"></i> Repo</a>
                 </div>
               </div>
             </div>
@@ -246,7 +209,7 @@
 
           <div class="card project-card" tabindex="0">
             <div class="card-image-wrapper">
-              <img src="projectASL.jpg" alt="Crossy Roads Game" class="card-cover" />
+              <img src="game.jpg" alt="Crossy Roads Game" class="card-cover" />
             </div>
             <div class="card-content">
               <div class="card-header">
@@ -263,7 +226,6 @@
                     <ul class="bullets">
                       <li><b>OOP Design:</b> Structured game objects using inheritance</li>
                       <li><b>Game Loop:</b> Implemented real-time update/render cycle</li>
-                      <li><b>Collision:</b> Created bounding-box logic</li>
                     </ul>
                   </div>
                   <div>
@@ -271,14 +233,12 @@
                     <div class="tags">
                       <span class="tag">Python</span>
                       <span class="tag">Pygame</span>
-                      <span class="tag">OOP</span>
+                      <span class="tag">AI Prompting</span>
                     </div>
                   </div>
                 </div>
                 <div class="actions">
-                  <a class="btn" href="https://github.com/KoljaHribar/Crossy-Road-with-AI-Challenge/tree/main" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-github"></i> Code
-                  </a>
+                  <a class="btn" href="https://github.com/KoljaHribar/Crossy-Road-with-AI-Challenge/tree/main" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
                 </div>
               </div>
             </div>
@@ -292,14 +252,48 @@
           <h2>Experience</h2>
         </div>
         <div class="grid expando-grid">
+          
           <details class="card expando">
             <summary class="expando-summary">
               <div class="expando-core">
-                <h3 class="expando-title">Krka Pharmaceuticals — Intern</h3>
-                <p class="expando-one">Supported enterprise data workflows.</p>
+                <h3 class="expando-title">Research Programmer</h3>
+                <p class="expando-one">Developing data pipelines and scoring logic to rate corporate Digital & AI Maturity.</p>
               </div>
               <div class="expando-meta">
-                <span class="time">Jul–Aug 2025</span>
+                <span class="time">Pitt • 2026</span>
+                <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
+              </div>
+            </summary>
+            <div class="expando-body">
+              <div class="split">
+                <div>
+                  <h4 class="mini-h">What I'm doing</h4>
+                  <ul class="bullets">
+                    <li><b>Algorithm Design:</b> writing core logic to score brands on "Digital Pillars"</li>
+                    <li><b>API Integration:</b> querying NewsAPI to fetch/classify corporate news</li>
+                    <li><b>Quality Control:</b> auditing complex company merges</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="mini-h">Skills</h4>
+                  <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">NewsAPI</span>
+                    <span class="tag">Data Validation</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
+          
+          <details class="card expando">
+            <summary class="expando-summary">
+              <div class="expando-core">
+                <h3 class="expando-title">Krka Pharmaceuticals Intern</h3>
+                <p class="expando-one">Supported enterprise data workflows and learned how data moves across systems.</p>
+              </div>
+              <div class="expando-meta">
+                <span class="time">Novo Mesto • 2025</span>
                 <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
               </div>
             </summary>
@@ -308,16 +302,19 @@
                 <div>
                   <h4 class="mini-h">What I did</h4>
                   <ul class="bullets">
-                    <li><b>SQL:</b> performed joins on internal company datasets</li>
-                    <li><b>SAP:</b> assisted with structured business processes</li>
+                    <li><b>SQL:</b> performed joins on internal company datasets to support reporting needs</li>
+                    <li><b>SAP workflows:</b> observed and assisted with structured business processes</li>
+                    <li><b>APIs:</b> reviewed and documented integrations using M-Files</li>
+                    <li><b>Collaboration:</b> worked with IT + business teams on how systems connect</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 class="mini-h">Skills</h4>
+                  <h4 class="mini-h">Skills used</h4>
                   <div class="tags">
                     <span class="tag">SQL</span>
                     <span class="tag">SAP</span>
-                    <span class="tag">Enterprise</span>
+                    <span class="tag">APIs</span>
+                    <span class="tag">Documentation</span>
                   </div>
                 </div>
               </div>
@@ -327,11 +324,11 @@
           <details class="card expando">
             <summary class="expando-summary">
               <div class="expando-core">
-                <h3 class="expando-title">University of Pittsburgh — Teaching Assistant</h3>
+                <h3 class="expando-title">Teaching Assistant</h3>
                 <p class="expando-one">Java course support and debugging help.</p>
               </div>
               <div class="expando-meta">
-                <span class="time">Fall 2025 – Present</span>
+                <span class="time">Pitt • 2025/26</span>
                 <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
               </div>
             </summary>
@@ -342,6 +339,7 @@
                   <ul class="bullets">
                     <li><b>Led:</b> weekly lab sessions for ~20 students</li>
                     <li><b>Debugging:</b> helped students fix code logic</li>
+                    <li><b>Teaching:</b> explained fundamentals clearly (loops, arrays, OOP)</li>
                   </ul>
                 </div>
                 <div>
@@ -355,13 +353,48 @@
               </div>
             </div>
           </details>
+
+          <details class="card expando">
+            <summary class="expando-summary">
+              <div class="expando-core">
+                <h3 class="expando-title">Peer Tutor</h3>
+                <p class="expando-one">Tutored students in discrete math reasoning and Java programming fundamentals.</p>
+              </div>
+              <div class="expando-meta">
+                <span class="time">Pitt • 2026</span>
+                <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
+              </div>
+            </summary>
+            <div class="expando-body">
+              <div class="split">
+                <div>
+                  <h4 class="mini-h">What I did</h4>
+                  <ul class="bullets">
+                    <li><b>Discrete Structures:</b> logic, proofs, sets, relations, induction</li>
+                    <li><b>Intro Programming:</b> Java fundamentals, debugging strategies, code reading</li>
+                    <li><b>Coaching:</b> helped students develop step-by-step approaches to problems</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="mini-h">Skills used</h4>
+                  <div class="tags">
+                    <span class="tag">Discrete Math</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">Communication</span>
+                    <span class="tag">Problem Solving</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
+
         </div>
       </section>
 
       <section id="about" class="section">
         <h2>About</h2>
-        <p>
-          I’m a Data Science and Computer Science student at the University of Pittsburgh. I’m drawn to problems where structure, efficiency, and clear reasoning matter. Outside academics, I play water polo and basketball—teams that taught me discipline and iteration.
+        <p style="text-align: center; max-width: 60ch; margin: 0 auto;">
+          I’m a Data Science and Computer Science student at Pitt. I’m drawn to problems where structure, efficiency, and clear reasoning matter. Outside academics, I play water polo and basketball—teams that taught me discipline and iteration.
         </p>
       </section>
 
@@ -399,20 +432,16 @@
         <button class="modal-close" aria-label="Close modal">
           <i class="fa-solid fa-xmark"></i>
         </button>
-        
         <div class="modal-image-container">
           <img src="" alt="" id="modal-img" />
         </div>
-        
         <div class="modal-body">
           <div class="modal-header-row">
             <h2 id="modal-title"></h2>
             <span id="modal-date" class="time"></span>
           </div>
           <p id="modal-summary" class="hero-sub"></p>
-          
-          <div id="modal-details">
-            </div>
+          <div id="modal-details"></div>
         </div>
       </div>
     </div>
