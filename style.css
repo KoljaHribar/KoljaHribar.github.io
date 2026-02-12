@@ -1,34 +1,27 @@
 :root {
   /* ============================
      1. LIGHT MODE (COOLORS PALETTE)
-     ============================
-     Palette: https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557
-     Red: #E63946
-     Honeydew: #F1FAEE
-     Light Blue: #A8DADC
-     Medium Blue: #457B9D
-     Dark Blue: #1D3557
      ============================ */
      
-  /* Defaults (Light Mode is the new default to match specific palette) */
+  /* Defaults */
   --bg-color: #F1FAEE;
   --text-color: #1D3557; 
   --muted-color: #457B9D; 
 
-  /* Glass Surfaces - Milky white for Light Mode */
+  /* Glass Surfaces */
   --glass-bg: rgba(255, 255, 255, 0.65);
-  --glass-border: rgba(29, 53, 87, 0.15); /* Using Dark Blue with low opacity */
+  --glass-border: rgba(29, 53, 87, 0.15); 
   --glass-hover: rgba(255, 255, 255, 0.85);
   --glass-shadow: 0 12px 40px rgba(29, 53, 87, 0.08);
 
   /* Accents */
-  --accent: #E63946;  /* Red */
-  --accent2: #457B9D; /* Medium Blue */
+  --accent: #E63946;  
+  --accent2: #457B9D; 
 
   /* Wave Colors (Light Mode) */
-  --wave-1: rgba(168, 218, 220, 0.6);  /* Light Blue #A8DADC */
-  --wave-2: rgba(230, 57, 70, 0.25);   /* Red #E63946 (Subtle) */
-  --wave-3: rgba(69, 123, 157, 0.35);  /* Medium Blue #457B9D */
+  --wave-1: rgba(168, 218, 220, 0.6);  
+  --wave-2: rgba(230, 57, 70, 0.25);   
+  --wave-3: rgba(69, 123, 157, 0.35);  
 
   /* Layout tokens */
   --radius: 18px;
@@ -39,30 +32,26 @@
 
 /* ============================
    2. DARK MODE OVERRIDES
-   ============================
-   Logic: Darker versions of the Light Mode palette.
-   Background becomes "Midnight" version of the Dark Blue.
-   Text becomes the Honeydew (Off-white).
    ============================ */
 [data-theme="dark"] {
-  --bg-color: #0b1623; /* Very dark navy, almost black */
+  --bg-color: #0b1623; 
   --text-color: #F1FAEE; 
   --muted-color: rgba(241, 250, 238, 0.7);
 
-  /* Glass Surfaces (Dark Mode) */
-  --glass-bg: rgba(29, 53, 87, 0.4); /* #1D3557 with transparency */
+  /* Glass Surfaces */
+  --glass-bg: rgba(29, 53, 87, 0.4); 
   --glass-border: rgba(241, 250, 238, 0.15);
   --glass-hover: rgba(29, 53, 87, 0.6);
   --glass-shadow: 0 18px 60px rgba(0, 0, 0, 0.6);
 
   /* Accents */
-  --accent: #E63946;  /* Red stays same, pops nicely */
-  --accent2: #A8DADC; /* Light Blue acts as secondary accent */
+  --accent: #E63946;  
+  --accent2: #A8DADC; 
 
-  /* Wave Colors (Dark Mode) */
-  --wave-1: rgba(29, 53, 87, 0.7);    /* Dark Blue #1D3557 */
-  --wave-2: rgba(230, 57, 70, 0.2);   /* Red (Deep) */
-  --wave-3: rgba(69, 123, 157, 0.4);  /* Medium Blue */
+  /* Wave Colors */
+  --wave-1: rgba(29, 53, 87, 0.7);    
+  --wave-2: rgba(230, 57, 70, 0.2);   
+  --wave-3: rgba(69, 123, 157, 0.4);  
 }
 
 *{ box-sizing:border-box; }
@@ -110,49 +99,30 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
 }
 
 /* ============================
-   WAVES (Replacing Blobs)
+   WAVES
    ============================ */
 .bg-wave {
   position: fixed;
   z-index: -1;
   pointer-events: none;
-  filter: blur(80px); /* Heavy blur for "fading pattern" look */
+  filter: blur(80px); 
   opacity: 0.8;
-  border-radius: 50%; /* Start round, stretch via dimensions */
+  border-radius: 50%; 
   animation: wave-drift 20s infinite alternate ease-in-out;
   transition: background-color 0.8s ease;
 }
 
-/* Wave 1: Large wash top left */
 .wave-1 {
-  top: -10%;
-  left: -10%;
-  width: 90vw;
-  height: 90vh;
-  background: var(--wave-1);
-  transform-origin: center;
+  top: -10%; left: -10%; width: 90vw; height: 90vh;
+  background: var(--wave-1); transform-origin: center;
 }
-
-/* Wave 2: Accent wash bottom right */
 .wave-2 {
-  bottom: -20%;
-  right: -10%;
-  width: 80vw;
-  height: 70vh;
-  background: var(--wave-2);
-  animation-delay: -5s;
-  animation-duration: 25s;
+  bottom: -20%; right: -10%; width: 80vw; height: 70vh;
+  background: var(--wave-2); animation-delay: -5s; animation-duration: 25s;
 }
-
-/* Wave 3: Drifting middle band */
 .wave-3 {
-  top: 40%;
-  left: 20%;
-  width: 70vw;
-  height: 60vh;
-  background: var(--wave-3);
-  animation-delay: -10s;
-  opacity: 0.6;
+  top: 40%; left: 20%; width: 70vw; height: 60vh;
+  background: var(--wave-3); animation-delay: -10s; opacity: 0.6;
 }
 
 @keyframes wave-drift {
@@ -164,25 +134,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
 /* Hero */
 .hero{ padding: 74px 0 34px; }
 
-.kicker{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  padding:8px 12px;
-  border:1px solid var(--glass-border);
-  background: var(--glass-bg);
-  border-radius:999px;
-  font-size:14px;
-  color: var(--muted-color);
-  backdrop-filter: blur(10px);
-  margin-bottom: 14px;
-}
-.kicker::before{
-  content:"";
-  width:10px; height:10px;
-  border-radius:999px;
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
-}
+/* Removed .kicker and .status-dot styles */
 
 .hero h1{
   font-size: clamp(38px, 5vw, 62px);
@@ -229,7 +181,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  border-radius:50%; /* Circular buttons */
+  border-radius:50%; 
   border:1px solid var(--glass-border);
   background: var(--glass-bg);
   color: var(--text-color);
@@ -311,7 +263,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
   color: var(--text-color);
   cursor: pointer;
   padding: 8px;
-  border-radius: 50%; /* Perfectly round */
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -321,11 +273,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
 }
 .theme-btn:hover {
   background: var(--glass-hover);
-  transform: rotate(15deg); /* Subtle spin on hover */
+  transform: rotate(15deg);
   border-color: var(--accent);
 }
 
-/* Toggle Logic for Icons */
 [data-theme="dark"] .sun-icon { display: block; }
 [data-theme="dark"] .moon-icon { display: none; }
 [data-theme="light"] .sun-icon { display: none; }
@@ -357,11 +308,11 @@ section.section{
 }
 
 section.section h2{
-  display: flex;             /* Changed from inline-flex to flex (takes full width) */
-  justify-content: center;   /* Centers the dot and text horizontally */
+  display: flex;
+  justify-content: center;
   align-items: center;
   gap: 10px;
-  width: 100%;               /* Ensures the header spans edge-to-edge */
+  width: 100%;
 }
 
 .section-head{ margin-bottom: 14px; }
@@ -372,10 +323,7 @@ section.section h2{
 }
 
 /* Grid + cards */
-.grid{
-  display:grid;
-  gap: 14px;
-}
+.grid{ display:grid; gap: 14px; }
 
 .card{
   border: 1px solid var(--glass-border);
@@ -463,12 +411,8 @@ section.section h2{
   margin-top: 4px;
 }
 
-/* ---------- Expandable Cards ---------- */
-
-.expando{
-  padding: 0;
-  overflow: hidden;
-}
+/* Expandable Cards */
+.expando{ padding: 0; overflow: hidden; }
 
 .expando summary{
   list-style: none;
@@ -492,11 +436,7 @@ section.section h2{
   min-width: 0;
 }
 
-.expando-title{
-  margin: 0;
-  font-size: 18px;
-  letter-spacing: -0.01em;
-}
+.expando-title{ margin: 0; font-size: 18px; letter-spacing: -0.01em; }
 
 .expando-one{
   color: var(--muted-color);
@@ -523,10 +463,7 @@ section.section h2{
   white-space: nowrap;
 }
 
-.chev{
-  transition: transform .2s ease;
-  opacity:.9;
-}
+.chev{ transition: transform .2s ease; opacity:.9; }
 
 .expando-body{
   padding: 0 18px 18px;
@@ -539,20 +476,14 @@ section.section h2{
   to{ opacity: 1; transform: translateY(0); }
 }
 
-.expando[open] .chev{
-  transform: rotate(180deg);
-}
+.expando[open] .chev{ transform: rotate(180deg); }
 
 .expando:not([open]):hover{
   border-color: var(--glass-border);
   background: var(--glass-hover);
 }
 
-.split{
-  display:grid;
-  gap: 14px;
-  margin-top: 12px;
-}
+.split{ display:grid; gap: 14px; margin-top: 12px; }
 
 .mini-h{
   margin: 0;
@@ -562,12 +493,8 @@ section.section h2{
 }
 
 /* Layout */
-.expando-grid{
-  grid-template-columns: repeat(12, 1fr);
-}
-.expando-grid > *{
-  grid-column: span 12;
-}
+.expando-grid{ grid-template-columns: repeat(12, 1fr); }
+.expando-grid > *{ grid-column: span 12; }
 
 /* Contact list */
 .contact-list{
@@ -642,112 +569,4 @@ section.section h2{
   .btn{ transition:none; }
   .icon-btn{ transition:none; }
   .expando-body{ animation:none; }
-}
-
-/* --- Discord Status Updates --- */
-
-/* The dot itself */
-.status-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #747f8d; /* Default Grey */
-  display: inline-block;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
-}
-
-/* Status Colors */
-.kicker.online .status-dot  { background-color: #43b581; box-shadow: 0 0 8px #43b581; }
-.kicker.idle .status-dot    { background-color: #faa61a; box-shadow: 0 0 8px #faa61a; }
-.kicker.dnd .status-dot     { background-color: #f04747; box-shadow: 0 0 8px #f04747; }
-.kicker.offline .status-dot { background-color: #747f8d; }
-
-/* Pulse Animation for Online */
-.kicker.online .status-dot {
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(0.8); }
-  100% { opacity: 1; transform: scale(1); }
-}
-
-/* Remove the original static dot from the kicker */
-#discord-status::before {
-  display: none; 
-}
-
-/* ============================
-   CHAMELEON BACKGROUND MODES
-   ============================ */
-
-/* --- 1. CODING MODE (Unchanged - Keeps the Cyber Vibe) --- */
-body.mode-coding {
-  --wave-1: rgba(120, 80, 255, 0.6);
-  --wave-2: rgba(0, 255, 255, 0.25);
-  --wave-3: rgba(255, 0, 150, 0.2);
-}
-[data-theme="dark"] body.mode-coding {
-  --bg-color: #0d001a;
-  --wave-1: rgba(90, 40, 200, 0.7);
-  --wave-2: rgba(0, 200, 200, 0.3);
-}
-
-/* --- 2. OFFLINE MODE (NEW: Dusk & Midnight Aurora) --- */
-body.mode-offline {
-  /* Light Mode: "Dusk" (Warm Grey + Muted Indigo + Soft Peach) */
-  --wave-1: rgba(85, 96, 120, 0.6);  /* Muted Indigo */
-  --wave-2: rgba(200, 180, 160, 0.4); /* Sand/Peach */
-  --wave-3: rgba(50, 50, 60, 0.1);    /* Dark Grey Shadow */
-}
-[data-theme="dark"] body.mode-offline {
-  /* Dark Mode: "Midnight Aurora" (Deep Navy + Slate + Silver) */
-  --bg-color: #050a14; /* Deep Navy Black */
-  --wave-1: rgba(40, 60, 90, 0.8);    /* Deep Blue */
-  --wave-2: rgba(100, 115, 130, 0.3); /* Slate Blue */
-  --wave-3: rgba(255, 255, 255, 0.05); /* Faint Silver Mist */
-}
-
-/* --- FLOATING STATUS ICONS (SCATTERED) --- */
-.status-floater {
-  position: absolute; /* Changed from fixed to absolute so they scroll away */
-  top: 15%;           /* Sit near the hero section */
-  height: 600px;      /* Tall container to spread icons out */
-  width: 150px;       /* Width constraint */
-  z-index: -1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around; /* Spread them vertically */
-  opacity: 0.06;      /* Subtle watermark */
-  pointer-events: none; /* Ignore clicks */
-}
-
-.left-floater { left: 2%; }
-.right-floater { right: 2%; align-items: flex-end; }
-
-/* Icon Styling */
-.status-floater i { 
-  display: none; 
-  font-size: 60px; /* Base size */
-  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1); /* Bouncy transition */
-}
-
-/* Visibility Logic */
-body.mode-coding .icon-coding { display: block; opacity: 1; transform: scale(1); }
-body.mode-offline .icon-offline { display: block; opacity: 1; transform: scale(1); }
-body:not(.mode-coding):not(.mode-offline) .icon-online { display: block; opacity: 1; transform: scale(1); }
-
-/* --- SCATTER VARIATIONS (Randomize Sizes & Rotations) --- */
-.status-floater i:nth-child(1) { font-size: 80px; transform: rotate(-10deg); }
-.status-floater i:nth-child(2) { font-size: 50px; transform: rotate(15deg); opacity: 0.7; }
-.status-floater i:nth-child(3) { font-size: 100px; transform: rotate(-5deg); opacity: 0.4; }
-
-/* Gentle Float Animation */
-.status-floater i { animation: floatIcon 8s ease-in-out infinite; }
-.status-floater i:nth-child(even) { animation-duration: 10s; animation-delay: -2s; }
-
-@keyframes floatIcon {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-15px) rotate(4deg); }
 }
