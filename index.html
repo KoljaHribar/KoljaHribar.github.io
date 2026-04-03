@@ -509,6 +509,69 @@
             </div>
           </details>
 
+          <details class="card expando">
+            <summary class="expando-summary">
+              <div class="expando-core">
+                <h3 class="expando-title">Yugoslavia Tourist Checklist</h3>
+                <p class="expando-one">
+                  A local-first Expo / React Native app to track recommended sights across the former Yugoslav republics, with country filters and derived travel stats.
+                </p>
+              </div>
+              <div class="expando-meta">
+                <span class="time">Coursework • 2026</span>
+                <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
+              </div>
+            </summary>
+
+            <div class="expando-body">
+              <img src="images/yugo_tourism.jpeg" alt="Screenshot of the Yugoslavia Tourist Checklist app showing the accomplishments list with country filter and checkboxes." class="project-showcase" />
+
+              <p class="desc">
+                I wrote a detailed <code>SPEC.md</code> (screens, filters, full location dataset, and stat rules), then directed an AI coding agent to implement the app in Expo with file-based routing. Progress is stored only on-device via Async Storage; a separate review pass checked the result against the spec and drove follow-up fixes and UX polish.
+              </p>
+
+              <div class="split">
+                <div>
+                  <h4 class="mini-h">Highlights</h4>
+                  <ul class="bullets">
+                    <li><b>Spec-driven build:</b> Two-tab flow—<b>My Accomplishments</b> (alphabetical checklist with per-country filters) and <b>My Stats</b> (completion %, summed elevation, and “regions fully covered” for the active filter).</li>
+                    <li><b>Persistent state:</b> Visited locations saved locally with a versioned JSON shape, ID sanitization, and user-visible handling when storage read/write fails.</li>
+                    <li><b>Derived metrics:</b> Stats recompute from filtered subsets (e.g. elevation totals and region completion when every sight in a region is checked).</li>
+                    <li><b>Agent workflow:</b> Implement from spec → structured code review (<code>REVIEW.md</code>) → targeted fixes and visual improvements (navigation shell, clearer hierarchy, haptics-friendly interaction).</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="mini-h">Tech</h4>
+                  <div class="tags">
+                    <span class="tag">React Native</span>
+                    <span class="tag">Expo</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">Expo Router</span>
+                    <span class="tag">Async Storage</span>
+                    <span class="tag">Cursor</span>
+                  </div>
+
+                  <h4 class="mini-h" style="margin-top: 14px;">What I’d do next</h4>
+                  <ul class="bullets">
+                    <li>Add automated tests for filter/stats edge cases and persistence migrations.</li>
+                    <li>Optional cloud backup or export so progress survives device changes.</li>
+                    <li>Accessibility pass (labels, contrast, larger touch targets) and optional localization.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="actions">
+                <a class="btn" href="https://github.com/KoljaHribar/Yugo_tourist_checklist.git" target="_blank" rel="noopener">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i> Code
+                </a>
+                <a class="btn btn-ghost" href="#contact">
+                  <i class="fa-regular fa-file-lines" aria-hidden="true"></i> Ask me about it
+                </a>
+              </div>
+            </div>
+          </details>
+
         </div>
       </section>
 
