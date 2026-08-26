@@ -650,56 +650,8 @@
           <details class="card expando">
             <summary class="expando-summary">
               <div class="expando-core">
-                <h3 class="expando-title">Krka Pharmaceuticals Intern</h3>
-                <p class="expando-one">Supported enterprise data workflows and learned how data moves across systems.</p>
-              </div>
-              <div class="expando-meta">
-                <span class="time">Novo Mesto • 2025</span>
-                <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
-              </div>
-            </summary>
-
-            <div class="expando-body">
-              <p class="desc">
-                Worked in a pharmaceutical environment with real business processes, internal datasets, and cross-team
-                communication.
-              </p>
-
-              <div class="split">
-                <div>
-                  <h4 class="mini-h">What I did</h4>
-                  <ul class="bullets">
-                    <li><b>SQL:</b> performed joins on internal company datasets to support reporting needs</li>
-                    <li><b>SAP workflows:</b> observed and assisted with structured business processes</li>
-                    <li><b>APIs:</b> reviewed and documented integrations using M-Files</li>
-                    <li><b>Collaboration:</b> worked with IT + business teams on how systems connect</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 class="mini-h">Skills used</h4>
-                  <div class="tags">
-                    <span class="tag">SQL</span>
-                    <span class="tag">SAP</span>
-                    <span class="tag">APIs</span>
-                    <span class="tag">Documentation</span>
-                    <span class="tag">Enterprise systems</span>
-                  </div>
-
-                  <h4 class="mini-h" style="margin-top: 14px;">Key takeaway</h4>
-                  <p class="desc">
-                    I got my first real view of how “messy real life” data becomes structured business decisions.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </details>
-          
-          <details class="card expando">
-            <summary class="expando-summary">
-              <div class="expando-core">
-                <h3 class="expando-title">Research Data Engineer</h3>
-                <p class="expando-one">Developing data pipelines and scoring logic to rate corporate Digital & AI Maturity.</p>
+                <h3 class="expando-title">Undergraduate Researcher</h3>
+                <p class="expando-one">First-authored a vision-language paper on whether models can read <i>how</i> an action is done.</p>
               </div>
               <div class="expando-meta">
                 <span class="time">Pittsburgh • 2026</span>
@@ -709,18 +661,67 @@
 
             <div class="expando-body">
               <p class="desc">
-                Building the "Master Data Collector," a system designed to rate companies based on financial data, 
-                social media presence, and digital maturity. My focus is on data integrity and algorithmic scoring.
+                Researched whether vision-language models understand action <i>technique</i> — not just what is happening,
+                but how it is performed.
               </p>
 
               <div class="split">
                 <div>
-                  <h4 class="mini-h">What I'm doing</h4>
+                  <h4 class="mini-h">What I did</h4>
                   <ul class="bullets">
-                    <li><b>Algorithm Design:</b> writing core logic to score brands on "Digital Pillars" (e.g., AI, Partnerships)</li>
-                    <li><b>API Integration:</b> querying the NewsAPI to automatically fetch and classify relevant corporate news</li>
-                    <li><b>Quality Control:</b> auditing complex company merges and validating master datasets</li>
-                    <li><b>Data Cleaning:</b> identifying and fixing critical merge errors (e.g., entity resolution mismatches)</li>
+                    <li><b>Paper:</b> first-authored a submission to an IROS 2026 workshop — all three models read tools and objects at 81–84%, but dropped to 57–68% on motion and grip</li>
+                    <li><b>Benchmark:</b> built the 311-claim Ego4D benchmark behind that result, hand-verifying every claim across 85 clips from six countries and giving each model the same 16 frames</li>
+                    <li><b>Scale:</b> labeled 7,688 Epic Kitchens clips on binary technique axes for a robot-learning collaboration, running Hugging Face VLMs across four GPUs</li>
+                    <li><b>Clinical study:</b> owned the vision-language side of an independent-living study, converting a paper self-care assessment into 58 automated checks on first-person kitchen video</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="mini-h">Skills used</h4>
+                  <div class="tags">
+                    <span class="tag">Computer Vision</span>
+                    <span class="tag">Vision-Language Models</span>
+                    <span class="tag">PyTorch</span>
+                    <span class="tag">Hugging Face</span>
+                    <span class="tag">Benchmark Design</span>
+                    <span class="tag">Academic Writing</span>
+                  </div>
+
+                  <h4 class="mini-h" style="margin-top: 14px;">Key takeaway</h4>
+                  <p class="desc">
+                    A careful benchmark can expose a gap that headline accuracy numbers completely hide.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="card expando">
+            <summary class="expando-summary">
+              <div class="expando-core">
+                <h3 class="expando-title">Research Programmer</h3>
+                <p class="expando-one">Built an LLM pipeline scoring corporate AI maturity across SEC filings and news.</p>
+              </div>
+              <div class="expando-meta">
+                <span class="time">Pittsburgh • 2026 — Present</span>
+                <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
+              </div>
+            </summary>
+
+            <div class="expando-body">
+              <p class="desc">
+                Architected the "Master Data Collector," a Python pipeline quantifying corporate AI and digital maturity
+                across Forbes 2000 and Fortune 500 companies.
+              </p>
+
+              <div class="split">
+                <div>
+                  <h4 class="mini-h">What I did</h4>
+                  <ul class="bullets">
+                    <li><b>Pipeline:</b> four-stage system following Loughran and McDonald that downloads, cleans, and scores SEC 10-K filings — 3,179 filings from 468 companies (2019–2025)</li>
+                    <li><b>LLM Scoring:</b> designed the scoring pipeline the project now runs on, rating five kinds of AI capability, and extended it to Factiva news so both sources are measured identically</li>
+                    <li><b>Cost Engineering:</b> cut a full 3,179-filing run to under $60 by scoring only text around keyword hits, skipping the model on empty categories, and checkpointing every filing</li>
+                    <li><b>Benchmarking:</b> engineered logic to score brands against "Digital Pillars," the project's key performance indicators</li>
                   </ul>
                 </div>
 
@@ -728,15 +729,15 @@
                   <h4 class="mini-h">Skills used</h4>
                   <div class="tags">
                     <span class="tag">Python</span>
-                    <span class="tag">NewsAPI</span>
-                    <span class="tag">Data Validation</span>
-                    <span class="tag">Algorithmic Scoring</span>
+                    <span class="tag">LLM Pipelines</span>
+                    <span class="tag">SEC EDGAR</span>
+                    <span class="tag">Data Engineering</span>
                     <span class="tag">Research</span>
                   </div>
 
                   <h4 class="mini-h" style="margin-top: 14px;">Key takeaway</h4>
                   <p class="desc">
-                    Building a reliable scoring system requires balancing automated logic with rigorous human-in-the-loop verification.
+                    Reliable scoring at scale comes from careful prompt and cost design, not from throwing more tokens at the problem.
                   </p>
                 </div>
               </div>
@@ -785,6 +786,54 @@
                   <h4 class="mini-h" style="margin-top: 14px;">Key takeaway</h4>
                   <p class="desc">
                     Teaching made me faster at diagnosing code and explaining technical ideas in simple steps.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="card expando">
+            <summary class="expando-summary">
+              <div class="expando-core">
+                <h3 class="expando-title">Krka Pharmaceuticals Intern</h3>
+                <p class="expando-one">Supported enterprise data workflows and learned how data moves across systems.</p>
+              </div>
+              <div class="expando-meta">
+                <span class="time">Novo Mesto • 2025</span>
+                <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
+              </div>
+            </summary>
+
+            <div class="expando-body">
+              <p class="desc">
+                Worked in a pharmaceutical environment with real business processes, internal datasets, and cross-team
+                communication.
+              </p>
+
+              <div class="split">
+                <div>
+                  <h4 class="mini-h">What I did</h4>
+                  <ul class="bullets">
+                    <li><b>SQL:</b> performed joins on internal company datasets to support reporting needs</li>
+                    <li><b>SAP workflows:</b> observed and assisted with structured business processes</li>
+                    <li><b>APIs:</b> reviewed and documented integrations using M-Files</li>
+                    <li><b>Collaboration:</b> worked with IT + business teams on how systems connect</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="mini-h">Skills used</h4>
+                  <div class="tags">
+                    <span class="tag">SQL</span>
+                    <span class="tag">SAP</span>
+                    <span class="tag">APIs</span>
+                    <span class="tag">Documentation</span>
+                    <span class="tag">Enterprise systems</span>
+                  </div>
+
+                  <h4 class="mini-h" style="margin-top: 14px;">Key takeaway</h4>
+                  <p class="desc">
+                    I got my first real view of how “messy real life” data becomes structured business decisions.
                   </p>
                 </div>
               </div>
